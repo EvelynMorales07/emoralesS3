@@ -16,8 +16,7 @@ public partial class vLogin : ContentPage
         password = contrasena;
        
     }
-  
-
+ 
     private void btnInicio_Clicked(object sender, EventArgs e)
     {
         if (user == txtUsuario.Text && password== txtContraseña.Text)
