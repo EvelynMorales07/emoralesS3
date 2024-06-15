@@ -14,4 +14,9 @@ public partial class vRegistro : ContentPage
 		DisplayAlert("ALERTA", "USUARIO GUARDADO", "OK");
 		Navigation.PushAsync(new vLogin(usuario, contrasena));
     }
+
+    private void btnCancelar_Clicked(object sender, EventArgs e)
+    {
+		Navigation.PushAsync(new vLogin());
+    }
 }

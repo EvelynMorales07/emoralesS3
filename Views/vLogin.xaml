@@ -16,21 +16,53 @@
         <Image Source="descarga.jpg"
                WidthRequest="100"/>
 
-        <Entry x:Name="txtUsuario"
-               Placeholder="Ingrese el usuario"/>
+        <Grid RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="USUARIO"
+                   HorizontalOptions="End"
+                   VerticalOptions="Center"
+                   FontSize="18"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtUsuario"
+            Placeholder="Ingrese el usuario"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
+            <Label Text="CONTRASEÑA"
+                    HorizontalOptions="End"
+                   VerticalOptions="Center"
+                   FontSize="18"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
 
-        <Entry x:Name="txtContraseña"
-       Placeholder="Ingrese la contraseña"
-               IsPassword="True"/>
+            <Entry x:Name="txtContraseña"
+            Placeholder="Ingrese la contraseña"
+                    IsPassword="True"
+                    Grid.Row="1"
+            Grid.Column="1"/>
+            
+            <Button x:Name="btnInicio"
+        Text="INICIAR SESIÓN"
+                    FontSize="14"
+         Clicked="btnInicio_Clicked"
+                    Grid.Row="3"
+                    Grid.Column="0"/>
 
-        <Button x:Name="btnInicio"
-               Text="INICIAR SESIÓN"
-                Clicked="btnInicio_Clicked"/>
-
-        <Button x:Name="btnRegistro"
-       Text="REGISTRAR USUARIO"
-                Clicked="btnRegistro_Clicked"/>
-
+            <Button x:Name="btnRegistro"
+            Text="REGISTRAR USUARIO"
+                    FontSize="14"
+         Clicked="btnRegistro_Clicked"
+                    Grid.Row="3"
+                    Grid.Column="1"/>
+        </Grid>
 
     </VerticalStackLayout>
 </ContentPage>
